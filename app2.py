@@ -7,7 +7,7 @@
 # pip install streamlit
 
 
-# In[4]:
+# In[2]:
 
 
 import streamlit as st
@@ -15,7 +15,7 @@ import pandas as pd
 import numpy as np
 
 
-# In[5]:
+# In[3]:
 
 
 HairEye = pd.read_csv("HairEyeColor.csv")
@@ -27,20 +27,27 @@ HairEye = pd.read_csv("HairEyeColor.csv")
 st.title("Hair Eye Colour Database")
 
 
-# In[ ]:
+# In[5]:
 
 
 InputHair = st.sidebar.selectbox("Select Hair Colour", ("Brown", "Black", "Blond", "Red"))
 
 
-# In[ ]:
+# In[8]:
 
 
 HairEyeselect = HairEye[HairEye["Hair"] == InputHair]
+HairEyeselect
+
+
+# In[9]:
+
+
+st.dataframe(HairEyeselect)
 
 
 # In[ ]:
 
 
-st.dataframe(HairEyeSelect)
+
 
